@@ -13,3 +13,4 @@ class Config(object):
 	MAIL_USERNAME = os.environ.get('pycuriousblog')
 	MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 	ADMINS = ['pycuriousblog@gmail.com']
+	POSTS_PER_PAGE = 25

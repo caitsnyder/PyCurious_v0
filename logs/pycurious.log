@@ -1,9 +1,66 @@
-2019-09-20 11:42:45,284 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-22 16:26:39,040 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-22 16:27:11,352 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-22 16:27:45,059 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-22 16:27:54,783 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-22 16:28:32,677 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-22 16:29:16,138 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-22 16:29:33,669 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 09:18:01,424 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
+2019-09-23 16:31:55,032 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 16:34:56,150 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 16:36:35,102 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 16:36:55,233 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 16:37:29,527 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 16:44:28,943 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:00:42,257 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:05:13,377 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:10:02,769 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:21:09,160 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:30:17,776 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:36:26,989 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:39:15,597 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:42:38,520 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:47:59,436 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:48:57,286 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 17:52:01,148 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 18:11:00,165 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 18:12:00,656 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 18:12:09,993 ERROR: Exception on /explore [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\routes.py", line 137, in explore
+    if posts.has_next else None
+AttributeError: 'list' object has no attribute 'has_next'
+2019-09-23 18:18:00,643 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 18:41:18,472 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 18:46:32,590 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 22:06:32,640 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-23 22:09:56,339 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 08:45:09,491 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:02:12,655 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:05:14,831 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:10:36,608 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:22:17,887 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:24:03,207 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:24:57,654 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:25:26,894 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:25:54,657 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:28:57,651 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 09:32:34,895 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 10:39:58,629 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 10:40:48,994 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 10:41:57,445 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 11:03:24,509 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 11:04:55,393 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 11:07:31,066 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 11:34:39,778 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 11:52:49,521 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 11:55:17,071 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 12:51:02,122 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 12:52:17,385 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 16:16:52,866 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]

@@ -1,14 +1,65 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-	<h1>Hi, {{ current_user.username }}!</h1>
-	{% for post in posts %}
-	<div>
-		<p>
-			{{ post.author.username }} says: <b> {{ post.body }}</b>
-		</p>
+	<div class="index-banner">
+		<div class="banner-text">
+			<div class="banner-title">PyCurious</div>
+			<div class="banner-subtitle">Tackling Python and data science one blog post at a time.</div>
+			<div class="call-to-action">Subscribe!</div>
+		</div>
+		<div class="banner-image">
+			<img id="snake-image" src="{{url_for('static', filename='images/snake_trans.png')}}" />
+		</div>
 	</div>
-	{% endfor %}
+
+	<div class="main-container">
+		<div class="content-container">
+			<div class="section-title">
+				Recent posts
+			</div>
+			<div class="post-content">
+				<div class="post-title">
+					Post title
+				</div>
+				<div class="post-date">
+					Post date
+				</div>
+				<div class="post-body">
+					Post body
+				</div>
+			</div>
+		</div>
+
+		{% if form %}
+		<form class="form-container" action="" method="post">
+			{{ form.hidden_tag() }}
+			<div class="form-label">
+				{{ form.post.label }}
+			</div>
+			<div class="form-input">
+				{{ form.post(cols=32, rows=4)}}
+			</div>
+				{% for error in form.post.errors %}
+				<span style="color:red;">[{{ error }}]</span>
+				{% endfor %}
+			<div class="button-standard">
+				{{ form.submit }}
+			</div>
+
+		</form>
+		{% endif %}
+
+		<div class="posts-container">
+			{% for post in posts %}
+				{% include '_post.html' %}
+			{% endfor %}
+			{% if prev_url %}
+				<a href="{{ prev_url }}">Newer posts</a>
+			{% endif %}
+			{% if next_url %}
+				<a href="{{ next_url }}">Older posts</a>
+			{% endif %}
+		</div>
+	</div>
 	
 {% endblock %}

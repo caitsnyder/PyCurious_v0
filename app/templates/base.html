@@ -5,28 +5,41 @@
 		{% else %}
 		<title>Welcome to PyCurious!</title>
 		{% endif %}
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div>
-			PyCurious: 
-			<a href="{{url_for('index')}}">Home</a>
-			{% if current_user.is_anonymous %}
-			<a href="{{url_for('login')}}">Login</a>
-			{% else %}
-			<a href="{{url_for('user',username=current_user.username)}}">Profile</a>
-			<a href="{{url_for('logout')}}">Logout</a>
-			{% endif %}
+		<div id="navbar">
+			<div id="site-name">
+				<a href="{{url_for('index')}}">PyCurious</a>
+			</div>
+			<div id="site-nav">
+				{% if current_user.is_anonymous %}
+				<a class="nav-link" href="{{url_for('login')}}">Login</a>
+				{% else %}
+				<a class="nav-link" href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+				<a class="nav-link" href="{{ url_for('explore') }}">Explore</a>
+				<a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+				{% endif %}
+			</div>
 		</div>
-		<hr>
-		{% with messages = get_flashed_messages() %}
-		{% if messages %}
-		<ul>
-			{% for message in messages %}
-			<li>{{ message }}</li>
-			{% endfor %}
-		</ul>
-		{% endif %}
-		{% endwith %}
-		{% block content %}{% endblock %}
+
+		<div class="messages-container">
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul>
+				{% for message in messages %}
+				<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+			{% endwith %}
+		</div>
+
+
+		{% block content %}
+		{% endblock %}
+
+
 	</body>
 </html>
