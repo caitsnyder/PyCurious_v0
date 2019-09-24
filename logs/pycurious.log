@@ -64,3 +64,5 @@ AttributeError: 'list' object has no attribute 'has_next'
 2019-09-24 12:51:02,122 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
 2019-09-24 12:52:17,385 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
 2019-09-24 16:16:52,866 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 16:30:36,233 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+2019-09-24 16:58:04,110 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
