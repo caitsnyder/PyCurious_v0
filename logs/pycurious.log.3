@@ -1,4 +1,4 @@
-2019-09-23 10:19:43,708 ERROR: Exception on /index [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+2019-09-25 12:58:42,335 ERROR: Exception on / [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,68 +14,11 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\routes.py", line 23, in index
-    return render_template('index.html', title='Home', posts=posts)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 20, in template
-    {% endif %}
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 268, in parse_block
-    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 212, in parse_if
-    node.body = self.parse_statements(('name:elif', 'name:else',
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 199, in parse_for
-    body = self.parse_statements(('name:endfor', 'name:else'))
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 144, in parse_statement
-    self.fail_unknown_tag(token.value, token.lineno)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 97, in fail_unknown_tag
-    return self._fail_ut_eof(name, self._end_token_stack, lineno)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 90, in _fail_ut_eof
-    self.fail(' '.join(message), lineno)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\parser.py", line 59, in fail
-    raise exc(msg, lineno, self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
-2019-09-23 10:20:53,433 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 10:31:22,640 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 10:31:24,756 ERROR: Exception on /index [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\main\routes.py", line 35, in index
+    page, app.config['COMMENTS_PER_PAGE'], False)
+NameError: name 'app' is not defined
+2019-09-25 12:59:50,404 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]
+2019-09-25 12:59:53,344 ERROR: Exception on / [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -91,8 +34,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\routes.py", line 24, in index
-    return render_template('index.html', title='Home', form=form, posts=posts.items)
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\main\routes.py", line 42, in index
+    prev_url=prev_url)
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
@@ -107,10 +50,71 @@ Traceback (most recent call last):
     raise value.with_traceback(tb)
   File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 13, in block "content"
-    {% for error in form.posts.errors %}
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.PostForm object' has no attribute 'posts'
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\base.html", line 44, in top-level template code
+    {% block content %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 54, in block "content"
+    {% include 'partials/_comment.html' %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\partials\_comment.html", line 7, in top-level template code
+    <a href="{{ url_for('user', username=comment.author.username) }}">
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?
+2019-09-25 13:02:14,622 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]
+2019-09-25 13:02:29,969 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]
+2019-09-25 13:02:32,288 ERROR: Exception on / [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\main\routes.py", line 42, in index
+    prev_url=prev_url)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\base.html", line 44, in top-level template code
+    {% block content %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 54, in block "content"
+    {% include 'partials/_comment.html' %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\partials\_comment.html", line 7, in top-level template code
+    <a href="{{ url_for('user', username=comment.author.username) }}">
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?

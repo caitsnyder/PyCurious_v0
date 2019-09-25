@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="error-title">{{ _('An unexpected error has occurred.') }}</div>
+	<div class="error-subtitle">{{ _('The administrator has been notified. Our apologies!') }}</div>
+	<div class="error-redirect">
+		<a href="{{ url_for('main.index') }}">{{ _('Back') }}</a>
+	</div>
+{% endblock %}

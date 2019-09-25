@@ -8,7 +8,7 @@
 			<div class="call-to-action">Subscribe!</div>
 		</div>
 		<div class="banner-image">
-			<img id="snake-image" src="{{url_for('static', filename='images/snake_trans.png')}}" />
+			<img id="snake-image" src="{{url_for('static', filename='img/snake_trans.png')}}" />
 		</div>
 	</div>
 
@@ -34,12 +34,12 @@
 		<form class="form-container" action="" method="post">
 			{{ form.hidden_tag() }}
 			<div class="form-label">
-				{{ form.post.label }}
+				{{ form.comment.label }}
 			</div>
 			<div class="form-input">
-				{{ form.post(cols=32, rows=4)}}
+				{{ form.comment(cols=32, rows=4)}}
 			</div>
-				{% for error in form.post.errors %}
+				{% for error in form.comment.errors %}
 				<span style="color:red;">[{{ error }}]</span>
 				{% endfor %}
 			<div class="button-standard">
@@ -49,15 +49,15 @@
 		</form>
 		{% endif %}
 
-		<div class="posts-container">
-			{% for post in posts %}
-				{% include '_post.html' %}
+		<div class="comments-container">
+			{% for comment in comments %}
+				<!-- {% include 'partials/_comment.html' %} -->
 			{% endfor %}
 			{% if prev_url %}
-				<a href="{{ prev_url }}">Newer posts</a>
+				<a href="{{ prev_url }}">Newer comments</a>
 			{% endif %}
 			{% if next_url %}
-				<a href="{{ next_url }}">Older posts</a>
+				<a href="{{ next_url }}">Older comments</a>
 			{% endif %}
 		</div>
 	</div>

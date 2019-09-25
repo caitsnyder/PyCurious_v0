@@ -1,4 +1,4 @@
-2019-09-23 10:47:52,157 ERROR: Exception on /index [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+2019-09-25 13:15:39,556 ERROR: Exception on /user/caitlin [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\routes.py", line 24, in index
-    posts=posts.items)
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\main\routes.py", line 56, in user
+    next_url=next_url, prev_url=prev_url)
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
@@ -28,27 +28,24 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 1, in top-level template code
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\user.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\index.html", line 13, in block "content"
-    {% for error in form.posts.errors %}
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'app.forms.PostForm object' has no attribute 'posts'
-2019-09-23 10:48:26,536 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 10:48:57,528 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 10:49:16,849 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 10:50:08,331 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 14:39:59,262 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:40]
-2019-09-23 14:56:44,733 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:18:31,235 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:19:36,408 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:22:03,784 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:39:28,227 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:40:34,363 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:40:50,608 ERROR: Exception on /authentication/login [POST] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\base.html", line 44, in top-level template code
+    {% block content %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\user.html", line 23, in block "content"
+    <a href="{{ url_for('edit_profile') }}">
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2019-09-25 13:15:44,618 ERROR: Exception on /user/caitlin [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -62,8 +59,28 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\routes.py", line 41, in login
-    return redirect(url_for('authentication/login'))
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\main\routes.py", line 56, in user
+    next_url=next_url, prev_url=prev_url)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\base.html", line 44, in top-level template code
+    {% block content %}
+  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\user.html", line 23, in block "content"
+    <a href="{{ url_for('edit_profile') }}">
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
@@ -74,39 +91,4 @@ Traceback (most recent call last):
     endpoint, values, method=method, force_external=external
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'authentication/login'. Did you mean 'login' instead?
-2019-09-23 15:41:02,056 ERROR: Exception on /authentication/login [POST] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\routes.py", line 41, in login
-    return redirect(url_for('authentication/login'))
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'authentication/login'. Did you mean 'login' instead?
-2019-09-23 15:58:24,956 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:58:42,429 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:59:32,969 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 15:59:47,365 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 16:00:02,822 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 16:00:21,703 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 16:12:25,629 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
-2019-09-23 16:22:47,283 INFO: Pycurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:42]
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?

@@ -1,17 +1,25 @@
 from datetime import datetime, timedelta
 import unittest
-from app import app, db
-from app.models import User, Post
+import unittest
+from app import create_app, db
+from app.models import User, Comment
+from config import Config
 
+class TestConfig(Config):
+	TESTING = True
+	SQLALCHEMY_DATABASE_URI = 'sqlite://'
 
 class UserModelCase(unittest.TestCase):
 	def setUp(self):
-		app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
+		self.app = create_app(TestConfig)
+		self.app_context = self.app.app_context()
+		self.app_context.push()
 		db.create_all()
 
 	def tearDown(self):
 		db.session.remove()
 		db.drop_all()
+		self.app_context.pop()
 
 	def test_password_hashing(self):
 		u = User(username='susan')
@@ -48,7 +56,7 @@ class UserModelCase(unittest.TestCase):
 		self.assertEqual(u1.followed.count(), 0)
 		self.assertEqual(u2.followers.count(), 0)
 
-	def test_follow_posts(self):
+	def test_follow_comments(self):
 		# create users
 		u1 = User(username='john', email='john@example.com')
 		u2 = User(username='susan', email='susan@example.com')
@@ -57,10 +65,10 @@ class UserModelCase(unittest.TestCase):
 
 		# create posts
 		now = datetime.utcnow()
-		p1 = Post(body="post from john", author=u1, timestamp=now+timedelta(seconds=1))
-		p2 = Post(body="post from susan", author=u2, timestamp=now+timedelta(seconds=4))
-		p3 = Post(body="post from mary", author=u3, timestamp=now+timedelta(seconds=3))
-		p4 = Post(body="post from david", author=u4, timestamp=now+timedelta(seconds=2))
+		p1 = Comment(body="comment from john", author=u1, timestamp=now+timedelta(seconds=1))
+		p2 = Comment(body="comment from susan", author=u2, timestamp=now+timedelta(seconds=4))
+		p3 = Comment(body="comment from mary", author=u3, timestamp=now+timedelta(seconds=3))
+		p4 = Comment(body="comment from david", author=u4, timestamp=now+timedelta(seconds=2))
 
 		# establish follower relationships
 		u1.follow(u2)
@@ -70,10 +78,10 @@ class UserModelCase(unittest.TestCase):
 		db.session.commit()
 
 		# see who followed whom
-		f1 = u1.followed_posts().all()
-		f2 = u2.followed_posts().all()
-		f3 = u3.followed_posts().all()
-		f4 = u4.followed_posts().all()
+		f1 = u1.followed_comments().all()
+		f2 = u2.followed_comments().all()
+		f3 = u3.followed_comments().all()
+		f4 = u4.followed_comments().all()
 
 		self.assertEqual(f1, [p2, p4, p1])
 		self.assertEqual(f2, [p2, p3])
