@@ -81,11 +81,16 @@ a {
 }
 
 .arrow-up {
-	color: rgba(8,80,78,1);
+	color: rgba(87,242,193,0.5);
+	/*color: rgba(171,248,224,1);*/
 	font-size: 1em;
 	position: fixed;
 	bottom: 5vh;
 	right: 5vh;
+}
+
+.block-container {
+	/*padding-top: 10rem;*/
 }
 
 .index-banner {
@@ -148,10 +153,9 @@ a {
     position: relative;
 }
 
-.main-container {
+.main-container, .full-container {
 	margin: -6rem auto 3rem auto;
 	padding: 4vh 5vw;
-	width: 60vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -159,6 +163,15 @@ a {
 	background-color: rgba(255,255,255,1);
 	border-radius: 6px;
 	box-shadow: 0px 0px 20px 0px rgba(120,120,120,0.4);
+}
+
+.main-container {
+	width: 60vw;
+}
+
+.full-container {
+	width: 80vw;
+
 }
 
 .content-container {
@@ -178,6 +191,10 @@ a {
  		rgba(87, 242, 193,0.7) 30%,
  		rgba(255,255,255,0.0) 10%
 	);
+}
+
+.title-left {
+	text-align: left;
 }
 
 .post-content {
@@ -202,6 +219,191 @@ a {
 	font-size: 0.4em;
 	width: 100%;
 }
+
+
+/* RESUME */
+.resume-top {
+	margin: 3rem 0 0 0;
+	width: 100%;
+	min-height: 440px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	border-bottom: solid 6px rgba(87, 242, 193,0.4);
+	background-image: url(../img/c_with_snake.png);
+	background-repeat: no-repeat;
+	background-size: 30rem auto;
+	background-position: bottom right;
+}
+
+.resume-title {
+	padding: 2rem 0 1rem 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.resume-name {
+	margin: 0 0 0.2rem 0;
+	padding: 1rem 0 1rem 0;
+	font-size: 2.5em;
+	line-height: 1.2em;
+	font-weight: bold;
+	text-shadow: 2px 2px white;
+}
+
+.resume-subtitle {
+	margin: 0 0 0.7em 0.2em;
+	width: 100%;
+	display: grid;
+  	grid-gap: 20px;
+  	grid-column: 1fr 1fr;
+	font-size: 0.75em;
+	font-weight: lighter;
+	color: rgba(81,89,108,0.8);
+	text-shadow: 2px 2px white;
+}
+
+.subtitle-line {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.subtitle-line i {
+	padding: 0 1.6rem;
+	font-size: 0.4em;
+	color: rgba(87, 242, 193,0.4);
+}
+
+.resume-content {
+	margin: 0 auto 5rem auto;
+	width: 100%;
+}
+
+.pill-box {
+	margin: 3rem 0 1rem 0;
+	width: 100%;
+	display: flex;
+  	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.pill {
+	margin: 0.5rem 2rem 0.8rem 0rem;
+	padding: 0.2rem 1.6rem 0.4rem 1.6rem;
+	min-width: 50px;
+	color: rgba(15,40,37,0.7);
+	font-size: 0.45em;
+	background: rgba(87, 242, 193,0.3);
+	border-radius: 40px;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.tagline {
+	font-weight: lighter;
+	color: rgba(81,89,108,0.8);
+	font-style: italic;
+	line-height: 140%;
+	font-size: .45em;
+}
+
+.tagline p {
+	margin: 2rem 0 1rem 0;
+}
+
+.resume-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.resume-section-header {
+	margin: 2.5rem 0 0.5rem 0;
+	font-style: italic;
+ 	background:-webkit-linear-gradient(
+ 		90deg, 
+ 		rgba(87,242,193,0.5) 30%,
+ 		rgba(255,255,255,0.0) 10%
+	);
+}
+
+.resume-section-title {
+	font-size: 1.5em;
+}
+
+.resume-item {
+	margin: 0 0 3.5rem 0;
+	width: 60vw;
+}
+
+.resume-item-post {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+	border-bottom: solid 3px rgba(87, 242, 193,0.4);
+}
+
+.post-title {
+	flex-grow: 1;
+	margin: 0.7rem 0 0.2rem 0;
+	padding: 0.2rem 0 0.2rem 0;
+	width: 100%;
+	font-size: 0.6em;
+	color: rgba(81,89,108,0.8);
+}
+
+.post-dates {
+	min-width: 5rem;
+	flex-grow: 0;
+	color: rgba(81,89,108,0.7);
+	font-weight: lighter;
+	font-size: 0.4em;
+	font-style: italic;
+	text-align: right`;
+}
+
+.resume-item-org {
+	padding: 0.4rem 0 0 0;
+	color: rgba(81,89,108,0.7);
+	font-weight: lighter;
+	font-size: 0.4em;
+}
+
+.resume-item-description {
+}
+
+.resume-item-task {
+	margin: 1rem 0 0rem 0;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.resume-item-task i {
+	padding: 0.7rem 1.3rem 0 0rem;
+	font-size: 0.3em;
+	color: rgba(87,242,193,0.4);
+}
+
+.resume-item-task-detail {
+	font-size: 0.5em;
+	color: rgba(81,89,108,0.8);
+	letter-spacing: 150%;
+} 
+
+
+
+
 
 
 /* FORMS */

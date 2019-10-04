@@ -1,4 +1,4 @@
-2019-09-25 12:46:52,408 ERROR: Exception on /favicon.ico [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+2019-09-25 12:47:53,007 ERROR: Exception on /favicon.ico [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -54,8 +54,8 @@ Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
-2019-09-25 12:47:38,165 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]
-2019-09-25 12:47:52,521 ERROR: Exception on /index [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+2019-09-25 12:48:22,085 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]
+2019-09-25 12:48:31,786 ERROR: Exception on /index [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -80,3 +80,29 @@ Traceback (most recent call last):
   File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\sessions.py", line 103, in _fail
     "The session is unavailable because no secret "
 RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2019-09-25 12:49:52,173 ERROR: Exception on /index [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 260, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 167, in unauthorized
+    flash(self.login_message, category=self.login_message_category)
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 423, in flash
+    session["_flashes"] = flashes
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\local.py", line 351, in __setitem__
+    self._get_current_object()[key] = value
+  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\sessions.py", line 103, in _fail
+    "The session is unavailable because no secret "
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2019-09-25 12:49:57,996 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]

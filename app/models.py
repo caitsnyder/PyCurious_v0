@@ -44,6 +44,10 @@ class User(UserMixin,db.Model):
 		if not self.is_following(user):
 			self.followed.append(user)
 
+	def unfollow(self, user):
+		if self.is_following(user):
+			self.followed.remove(user)
+
 	def followed_by(user):
 		return Comment.query.join(
 			followers, (followers.c.followed_id == Comment.user.id)).filter(

@@ -1,68 +1,42 @@
-2019-09-25 13:16:16,191 ERROR: Exception on /user/caitlin [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\main\routes.py", line 56, in user
-    next_url=next_url, prev_url=prev_url)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\base.html", line 44, in top-level template code
-    {% block content %}
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\templates\user.html", line 23, in block "content"
-    <a href="{{ url_for('main.edit_profile') }}">
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2215, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2020, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
-2019-09-25 13:16:25,633 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]
-2019-09-25 13:16:33,017 ERROR: Exception on /explore [GET] [in c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\caitlin\dropbox\python_201909\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Caitlin\Dropbox\python_201909\microblog\app\main\routes.py", line 111, in explore
-    if comments.has_next else None
-AttributeError: 'list' object has no attribute 'has_next'
-2019-09-25 13:20:49,655 INFO: PyCurious startup [in C:\Users\Caitlin\Dropbox\python_201909\microblog\app\__init__.py:68]
+2019-10-03 16:35:08,874 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 16:35:42,256 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 16:42:19,792 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 16:43:13,746 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 16:52:29,854 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 16:56:50,128 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 16:57:29,514 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:05:26,538 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:08:25,043 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:08:46,181 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:12:50,838 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:15:33,770 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:20:44,812 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:21:02,347 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:23:36,375 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:29:26,507 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:32:13,682 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:36:56,294 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:42:03,452 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:45:24,494 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:51:54,022 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 17:54:44,620 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 18:05:28,575 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 18:10:59,741 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 18:12:37,125 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 18:24:13,471 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 18:29:04,716 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 18:29:41,891 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 20:37:19,959 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 20:37:43,063 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 21:20:57,027 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 21:21:38,971 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 21:34:34,438 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 21:52:49,919 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 21:56:58,238 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 21:58:08,660 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 22:07:37,016 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 22:09:04,354 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 22:16:48,153 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 22:22:07,564 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 22:32:31,075 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]
+2019-10-03 22:37:38,635 INFO: PyCurious startup [in /Users/caitlinsnyder/Dropbox/python_201909/pycurious/app/__init__.py:68]

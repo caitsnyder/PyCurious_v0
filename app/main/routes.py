@@ -41,6 +41,10 @@ def index():
 						   comments=comments.items, next_url=next_url,
 						   prev_url=prev_url)
 
+@bp.route('/resume')
+def resume():
+    return render_template('resume.html', user=user)
+
 @bp.route('/user/<username>')
 @login_required
 def user(username):
