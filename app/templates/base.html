@@ -5,7 +5,7 @@
 		{% else %}
 		<title>Welcome to PyCurious!</title>
 		{% endif %}
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='scss/main.css') }}">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/e957eaf03f.js" crossorigin="anonymous"></script>
 		<!-- <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"> -->
@@ -16,15 +16,8 @@
 				<a href="{{url_for('main.index')}}">PyCurious</a>
 			</div>
 			<div id="site-nav">
-				{% if current_user.is_anonymous %}
-				<a class="nav-link" href="{{url_for('auth.login')}}">Login</a>
-				{% else %}
-				<a class="nav-link" href="{{ url_for('main.explore') }}">About</a>
+				<!-- <a class="nav-link" href="{{ url_for('main.resume') }}">About</a> -->
 				<a class="nav-link" href="{{ url_for('main.resume') }}">Resume</a>
-				<a class="nav-link" href="{{ url_for('main.explore') }}">Explore</a>
-				<a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
-				<a class="nav-link" href="{{ url_for('main.user', username=current_user.username) }}">My profile</a>
-				{% endif %}
 			</div>
 		</div>
 
@@ -44,6 +37,11 @@
 		<!-- <div class="block-container"> -->
 			{% block content %}
 			{% endblock %}
+
+			<div class="social-container">
+				<i class="fab fa-github"></i>
+				<i class="fab fa-linkedin"></i>
+			</div>
 		<!-- </div> -->	
 		
 		<script src="/static/scripts.js" charset="utf-8"></script>

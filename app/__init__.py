@@ -8,6 +8,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
+from flask_scss import Scss
 from config import Config
 
 db = SQLAlchemy()
@@ -30,6 +31,8 @@ def create_app(config_class=Config):
 	mail.init_app(app)
 	moment.init_app(app)
 	babel.init_app(app)
+	Scss(app)
+
 
 	#  Blueprints
 	from app.errors import bp as errors_bp
@@ -69,11 +72,18 @@ def create_app(config_class=Config):
 
 	return app
 
-@babel.localeselector
-def get_locale():
-	return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+
+# @babel.localeselector
+# def get_locale():
+	# return request.accept_languages.best_match(current_app.config['LANGUAGES'])
 	# To force French translations without changing browswer settings,
 	# comment out the above return and uncomment the below return
 	# return 'fr'
 
 from app import models
+
+
+
+
+if __name__ == '__main__':
+    app.run()
