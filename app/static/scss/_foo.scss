@@ -14,3 +14,5 @@
 echo "web: python pycurious.py" > Procfile
 
 echo "web: flask db upgrade; gunicorn pycurious:app" > Procfile
+
+$ heroku config:set FLASK_APP=pycurious.py
