@@ -30,12 +30,12 @@ a {
 
 .social-container i {
 	padding: 0 1vw 4vh 1vw;
-	color: rgba(87,242,193,1);
+	color: rgba(87,242,193,0.3);
 	font-size: 1em;
 }
 
 .social-container i:hover {
-	color: rgba(6,125,124,0.8);
+	color: rgba(81,89,108,0.7);;
 }
 
 .error-title {
