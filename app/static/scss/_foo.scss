@@ -9,3 +9,8 @@
 /* DARK EMERALD: rgb(15,40,37) */
 /* WHITE: rgb(255,249,244) */
 /* MINT: rgb(87,242,193) */
+
+
+echo "web: python pycurious.py" > Procfile
+
+web: flask db upgrade; gunicorn microblog:app
