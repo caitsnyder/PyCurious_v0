@@ -13,4 +13,4 @@
 
 echo "web: python pycurious.py" > Procfile
 
-web: flask db upgrade; gunicorn microblog:app
+echo "web: flask db upgrade; gunicorn pycurious:app" > Procfile
